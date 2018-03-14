@@ -1,0 +1,33 @@
+The 20 Questions Guessing game uses a sophisticated artificial intelligence
+algorithm to guess the animal that you are thinking about. It uses a neural network
+to store the answers to all the questions for each animal. Each game that is played
+modifies the neural network, so the game is constantly getting smarter.
+
+Traditionally, the technology behind this game would be a binary tree where each
+node of the tree is a question and the leaves of the tree are the animals.
+You take a different path down the tree based on the answer to each questions.
+This method has some serious disadvantages. First, this method is intollerant
+of mistakes by the player. Any questions answered wrong will move the player
+down the wrong branch of the tree and the correct animal will never be guessed.
+Second, using the tree method, all questions require a yes or no answer.
+Many questions about animals are sometimes ambiguous, or can be correctly
+answers yes and no depending on the interpretation. The method I chose overcomes
+these two problems.
+
+The 20 Questions game on Braingle.com uses a neural network. Think of this as
+a matrix where all the rows are animals and all the columns are questions.
+Each cell represents the answer to one question for one animal. Each answer is
+represented as a whole number. The more positive the number, the more likely
+the answer to this questions for this animal is 'yes'. The more negative the
+number, the more likely the answer is 'no'. Each time an animal is guessed
+correctly, the neural network is updated to reinforce those questions that were asked.
+
+When you are playing the game, it keeps track of a score for each animal in the
+database based on the answers that you have given. The higher the score, the
+more likely the animal is the one you have in your mind. After each question,
+the game calculates the best possible question to ask you.
+
+If somehow the game quesses incorrectly, it will ask the player to enter
+the animal's name and a question to differentiate it from the animal it guessed.
+This information is added to the database so the game is constantly learning new
+animals and questions.
